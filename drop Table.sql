@@ -1,5 +1,9 @@
+/*
+Mohammad Laknahour
+Date: 05/15/2017
+*/
 
-
+-- Remove Tables
 drop TABLE cross_eventTableAndPeople
 drop TABLE cross_PresentationTrack
 drop TABLE cross_roleAndPeople

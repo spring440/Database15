@@ -1,10 +1,12 @@
-
+/*
+Mohammad Laknahour
+Date: 05/15/2017
+*/
 
 ALTER PROCEDURE insertPresentation
 
   @nameOfPresentation varchar(255),
   @NameOfSpeaker varchar(255)
-
 
 AS
   DECLARE @IdOfPresentation INT
@@ -51,8 +53,7 @@ the name is equal to the name of speaker*/
 /*Set the role id of the speaker to the id associated with 'Presenter'*/
   SET @presenterRoleID =  (SELECT TOP 1 id_roles FROM Roles WHERE titleOfRoles='Presenter')
 /*check if the speaker associated with the 'present role '*/
-  IF NOT EXISTS(SELECT TOP 1 idPeopleRoles FROM cross_roleAndPeople
-  WHERE idPeopleRoles= @IdOfSpeaker AND idRole = @presenterRoleID)
+  IF NOT EXISTS(SELECT TOP 1 idPeopleRoles FROM cross_roleAndPeople WHERE idPeople= @IdOfSpeaker AND idRole = @presenterRoleID)
 /*if not label the person as a presenter*/
   BEGIN
     INSERT INTO cross_roleAndPeople
@@ -62,10 +63,12 @@ the name is equal to the name of speaker*/
   END
 
 
+
 /*it is finally make connection between the presentation and speaker*/
   INSERT INTO cross_SpeakerPresentation
-  (presentationID, SpeakerID) VALUES (@IdOfPresentation, @IdOfSpeaker )
+  (presentationID, SpeakerID) VALUES (@IdOfPresentation, @IdOfSpeaker)
 GO
+
 
 
 /* CREATE PROCEDURE for budapest */

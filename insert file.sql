@@ -1,3 +1,9 @@
+/*
+Mohammad Laknahour
+Date: 05/15/2017
+*/
+
+
 
 INSERT INTO event
 (date, nameOfTheEvent, addressOfTheEvent) VALUES
@@ -9,6 +15,7 @@ INSERT INTO event
 (' 27-May-17 ',' SQLSaturday #630 - Brisbane 2017 ',' Asia Pacific '),
 (' 27-May-17 ',' SQLSaturday #599 - Plovdiv 2017 ',' Europe/Middle East/Africa '),
 (' 3-Jun-17 ',' SQLSaturday #638 - Philadelphia 2017 ',' Canada/US ')
+
 
 
 INSERT INTO people
@@ -275,7 +282,9 @@ INSERT INTO presentation
 
 
 
-INSERT INTO roles VALUES
+
+INSERT INTO roles
+(titleOfRoles) VALUES
 ('Presenter'),
 ('Attendee'),
 ('Organizer'),
@@ -283,11 +292,14 @@ INSERT INTO roles VALUES
 ('Sponsor')
 
 
-INSERT INTO room VALUES
+
+INSERT INTO room
+(roomName) VALUES
 ('Gdf terem'),
 ('Kalmar terem'),
 ('Kemeny terem'),
 ('1-es terem')
+
 
 
 INSERT INTO sponsor
@@ -320,8 +332,8 @@ INSERT INTO timeSlot
 
 
 
-
- INSERT INTO track VALUES
+ INSERT INTO track
+ (nameOfTheTrack) VALUES
 ('Application And Database Development'),
 ('Analytics And Visualization'),
 ('Advanced Analysis Techniques'),
@@ -334,21 +346,20 @@ INSERT INTO timeSlot
 
 INSERT INTO presentation
 (title, difficulty,eventCity) VALUES
-('Microsoft adat platform áttekintés ',' Beginner ', 'Budapest '),
-('SQL Server 2016 Availability Group újdonságok ',' Beginner ', 'Budapest '),
-('Önkiszolgáló adatvizualizációs lehetőségek Power ' +
-'BI segítségével a földön, vagy a felhőben',' Beginner ', 'Budapest '),
-('Analysis Services biztonság ',' Intermediate ', 'Budapest '),
-('Az eltűnt operátor nyomában ',' Intermediate ', 'Budapest '),
-('Self Service BI Solutions with Analysis Services ',' Beginner ', 'Budapest '),
-('Complex Tabular Modelling - A Case Study',' Intermediate', 'Budapest '),
-('Introducing R ',' Intermediate ', 'Budapest '),
-('A Game of Hierarchies: Mastering Recursive Queries ',' Advanced ', 'Budapest ')
+('Microsoft adat platform áttekintés','Beginner', 'Budapest'),
+('SQL Server 2016 Availability Group újdonságok','Beginner ', 'Budapest'),
+('Önkiszolgáló adatvizualizációs lehetőségek Power BI segítségével a földön, vagy a felhőben','Beginner', 'Budapest'),
+('Analysis Services biztonság','Intermediate', 'Budapest'),
+('Az eltűnt operátor nyomában','Intermediate', 'Budapest'),
+('Self Service BI Solutions with Analysis Services','Beginner', 'Budapest'),
+('Complex Tabular Modelling - A Case Study','Intermediate', 'Budapest'),
+('Introducing R ','Intermediate', 'Budapest'),
+('A Game of Hierarchies: Mastering Recursive Queries','Advanced', 'Budapest')
+
 
 
 INSERT INTO schedule
 (presentationID, timeSlotID, roomID) VALUES
-
  (155,1,1),
  (156,2,1),
  (157,3,1),
@@ -361,10 +372,8 @@ INSERT INTO schedule
 
 
 
-
 INSERT INTO cross_PresentationTrack
-(presentationID, trackID ) VALUES
-
+(presentationID, trackID) VALUES
  (155,7),
  (156,5),
  (157,2),
@@ -377,12 +386,8 @@ INSERT INTO cross_PresentationTrack
 
 
 
-/*---------------------------------*/
-
-
 INSERT INTO cross_roleAndPeople
-(idRole, idPeople ) VALUES
-
+(idRole, idPeople) VALUES
 (2, 1 ) ,
 (2, 2 ) ,
 (2, 3 ) ,
@@ -489,15 +494,12 @@ INSERT INTO cross_roleAndPeople
 EXEC insertPresentation 'Viktor Dudas', 'Microsoft adat platform áttekintés';
 EXEC insertPresentation 'Gergely Csom', 'Microsoft adat platform áttekintés';
 EXEC insertPresentation 'Janos Berke', 'SQL Server 2016 Availability Group újdonságok';
-EXEC insertPresentation 'Attila Kővári', 'Önkiszolgáló adatvizualizációs lehetőségek Power ' +
-                                         'BI segítségével a földön, vagy a felhőben';
+EXEC insertPresentation 'Attila Kővári', 'Önkiszolgáló adatvizualizációs lehetőségek Power BI segítségével a földön, vagy a felhőben';
 EXEC insertPresentation 'Zoltán Horváth', 'Analysis Services biztonság';
 EXEC insertPresentation 'Zoltán Hangyál', 'Az eltűnt operátor nyomában';
 EXEC insertPresentation 'LEONEL ABREU', 'Self Service BI Solutions with Analysis Services';
 EXEC insertPresentation 'Bob Duffy', 'Complex Tabular Modelling - A Case Study';
 EXEC insertPresentation 'Dejan Sarka', 'Introducing R';
 EXEC insertPresentation 'Markus Ehrenmueller-Jensen', 'A Game of Hierarchies: Mastering Recursive Queries';
-
-
 
 
