@@ -1,4 +1,3 @@
-/*
 
 INSERT INTO event
 (date, nameOfTheEvent, addressOfTheEvent) VALUES
@@ -322,9 +321,6 @@ INSERT INTO timeSlot
 
 
 
-
-
-
  INSERT INTO track VALUES
 ('Application And Database Development'),
 ('Analytics And Visualization'),
@@ -332,29 +328,53 @@ INSERT INTO timeSlot
 ('Development & Administration'),
 ('Enterprise Database Administration'),
 ('Professional Development'),
-('Strategy and Architecture')*/
+('Strategy and Architecture')
 
 
 
 INSERT INTO presentation
 (title, difficulty,eventCity) VALUES
-('Microsoft adat platform áttekintés ',' Beginner ', 'Budapest ')
+('Microsoft adat platform áttekintés ',' Beginner ', 'Budapest '),
+('SQL Server 2016 Availability Group újdonságok ',' Beginner ', 'Budapest '),
+('Önkiszolgáló adatvizualizációs lehetőségek Power ' +
+'BI segítségével a földön, vagy a felhőben',' Beginner ', 'Budapest '),
+('Analysis Services biztonság ',' Intermediate ', 'Budapest '),
+('Az eltűnt operátor nyomában ',' Intermediate ', 'Budapest '),
+('Self Service BI Solutions with Analysis Services ',' Beginner ', 'Budapest '),
+('Complex Tabular Modelling - A Case Study',' Intermediate', 'Budapest '),
+('Introducing R ',' Intermediate ', 'Budapest '),
+('A Game of Hierarchies: Mastering Recursive Queries ',' Advanced ', 'Budapest ')
+
 
 INSERT INTO schedule
 (presentationID, timeSlotID, roomID) VALUES
 
- (155, 1,1 )
-/* (156,2,1)*/
+ (155,1,1),
+ (156,2,1),
+ (157,3,1),
+ (158,4,1),
+ (159,5,1),
+ (160,1,2),
+ (161,3,2),
+ (162,4,2),
+ (163,5,2)
 
 
 
-/*---------------------------------*/
 
 INSERT INTO cross_PresentationTrack
 (presentationID, trackID ) VALUES
 
- (155, 7 )
-/*(156,5)*/
+ (155,7),
+ (156,5),
+ (157,2),
+ (158,4),
+ (159,7),
+ (160,4),
+ (161,4),
+ (162,2),
+ (163,1)
+
 
 
 /*---------------------------------*/
@@ -363,112 +383,121 @@ INSERT INTO cross_PresentationTrack
 INSERT INTO cross_roleAndPeople
 (idRole, idPeople ) VALUES
 
+(2, 1 ) ,
+(2, 2 ) ,
+(2, 3 ) ,
+(2, 4 ) ,
+(2, 5 ) ,
+(2, 6 ) ,
+(2, 7 ) ,
+(2, 8 ) ,
+(2, 9 ) ,
+(2, 10 ) ,
+(2, 11 ) ,
+(2, 12 ) ,
+(2, 13 ) ,
+(2, 14 ) ,
+(2, 15 ) ,
+(2, 16 ) ,
+(2, 17 ) ,
+(2, 18 ) ,
+(2, 19 ) ,
+(2, 20 ) ,
+(2, 21 ) ,
+(2, 22 ) ,
+(2, 23 ) ,
+(2, 24 ) ,
+(2, 25 ) ,
+(2, 26 ) ,
+(2, 27 ) ,
+(2, 28 ) ,
+(2, 29 ) ,
+(2, 30 ) ,
+(2, 31 ) ,
+(2, 32 ) ,
+(2, 33 ) ,
+(2, 34 ) ,
+(2, 35 ) ,
+(2, 36 ) ,
+(2, 37 ) ,
+(2, 38 ) ,
+(2, 39 ) ,
+(2, 40 ) ,
+(2, 41 ) ,
+(2, 42 ) ,
+(2, 43 ) ,
+(2, 44 ) ,
+(2, 45 ) ,
+(2, 46 ) ,
+(2, 47 ) ,
+(2, 48 ) ,
+(2, 49 ) ,
+(2, 50 ) ,
+(2, 51 ) ,
+(2, 52 ) ,
+(2, 53 ) ,
+(2, 54 ) ,
+(2, 55 ) ,
+(2, 56 ) ,
+(2, 57 ) ,
+(2, 58 ) ,
+(2, 59 ) ,
+(2, 60 ) ,
+(2, 61 ) ,
+(2, 62 ) ,
+(2, 63 ) ,
+(2, 64 ) ,
+(2, 65 ) ,
+(2, 66 ) ,
+(2, 67 ) ,
+(2, 68 ) ,
+(2, 69 ) ,
+(2, 70 ) ,
+(2, 71 ) ,
+(2, 72 ) ,
+(2, 73 ) ,
+(2, 74 ) ,
+(2, 75 ) ,
+(2, 76 ) ,
+(2, 77 ) ,
+(2, 78 ) ,
+(2, 79 ) ,
+(2, 80 ) ,
+(2, 81 ) ,
+(2, 82 ) ,
+(2, 83 ) ,
+(2, 84 ) ,
+(2, 85 ) ,
+(2, 86 ) ,
+(2, 87 ) ,
+(2, 88 ) ,
+(2, 89 ) ,
+(2, 90 ) ,
+(2, 91 ) ,
+(2, 92 ) ,
+(2, 93 ) ,
+(2, 94 ) ,
+(2, 95 ) ,
+(2, 96 ) ,
+(2, 97 ) ,
+(2, 98 ) ,
+(2, 99 ) ,
+(2, 100 )
 
-(2,  1  )  ,
-(2,  2  )  ,
-(2,  3  )  ,
-(2,  4  )  ,
-(2,  5  )  ,
-(2,  6  )  ,
-(2,  7  )  ,
-(2,  8  )  ,
-(2,  9  )  ,
-(2,  10  )  ,
-(2,  11  )  ,
-(2,  12  )  ,
-(2,  13  )  ,
-(2,  14  )  ,
-(2,  15  )  ,
-(2,  16  )  ,
-(2,  17  )  ,
-(2,  18  )  ,
-(2,  19  )  ,
-(2,  20  )  ,
-(2,  21  )  ,
-(2,  22  )  ,
-(2,  23  )  ,
-(2,  24  )  ,
-(2,  25  )  ,
-(2,  26  )  ,
-(2,  27  )  ,
-(2,  28  )  ,
-(2,  29  )  ,
-(2,  30  )  ,
-(2,  31  )  ,
-(2,  32  )  ,
-(2,  33  )  ,
-(2,  34  )  ,
-(2,  35  )  ,
-(2,  36  )  ,
-(2,  37  )  ,
-(2,  38  )  ,
-(2,  39  )  ,
-(2,  40  )  ,
-(2,  41  )  ,
-(2,  42  )  ,
-(2,  43  )  ,
-(2,  44  )  ,
-(2,  45  )  ,
-(2,  46  )  ,
-(2,  47  )  ,
-(2,  48  )  ,
-(2,  49  )  ,
-(2,  50  )  ,
-(2,  51  )  ,
-(2,  52  )  ,
-(2,  53  )  ,
-(2,  54  )  ,
-(2,  55  )  ,
-(2,  56  )  ,
-(2,  57  )  ,
-(2,  58  )  ,
-(2,  59  )  ,
-(2,  60  )  ,
-(2,  61  )  ,
-(2,  62  )  ,
-(2,  63  )  ,
-(2,  64  )  ,
-(2,  65  )  ,
-(2,  66  )  ,
-(2,  67  )  ,
-(2,  68  )  ,
-(2,  69  )  ,
-(2,  70  )  ,
-(2,  71  )  ,
-(2,  72  )  ,
-(2,  73  )  ,
-(2,  74  )  ,
-(2,  75  )  ,
-(2,  76  )  ,
-(2,  77  )  ,
-(2,  78  )  ,
-(2,  79  )  ,
-(2,  80  )  ,
-(2,  81  )  ,
-(2,  82  )  ,
-(2,  83  )  ,
-(2,  84  )  ,
-(2,  85  )  ,
-(2,  86  )  ,
-(2,  87  )  ,
-(2,  88  )  ,
-(2,  89  )  ,
-(2,  90  )  ,
-(2,  91  )  ,
-(2,  92  )  ,
-(2,  93  )  ,
-(2,  94  )  ,
-(2,  95  )  ,
-(2,  96  )  ,
-(2,  97  )  ,
-(2,  98  )  ,
-(2,  99  )  ,
-(2,  100  )
 
-
-/*---------------------------------*/
 
 EXEC insertPresentation 'Viktor Dudas', 'Microsoft adat platform áttekintés';
 EXEC insertPresentation 'Gergely Csom', 'Microsoft adat platform áttekintés';
+EXEC insertPresentation 'Janos Berke', 'SQL Server 2016 Availability Group újdonságok';
+EXEC insertPresentation 'Attila Kővári', 'Önkiszolgáló adatvizualizációs lehetőségek Power ' +
+                                         'BI segítségével a földön, vagy a felhőben';
+EXEC insertPresentation 'Zoltán Horváth', 'Analysis Services biztonság';
+EXEC insertPresentation 'Zoltán Hangyál', 'Az eltűnt operátor nyomában';
+EXEC insertPresentation 'LEONEL ABREU', 'Self Service BI Solutions with Analysis Services';
+EXEC insertPresentation 'Bob Duffy', 'Complex Tabular Modelling - A Case Study';
+EXEC insertPresentation 'Dejan Sarka', 'Introducing R';
+EXEC insertPresentation 'Markus Ehrenmueller-Jensen', 'A Game of Hierarchies: Mastering Recursive Queries';
+
+
 
 

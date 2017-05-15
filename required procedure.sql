@@ -69,6 +69,6 @@ GO
 
 
 /* CREATE PROCEDURE for budapest */
-CREATE PROCEDURE budapestData
+ALTER PROCEDURE budapestData
   AS
   SELECT  * FROM presentation WHERE eventCity='Budapest'
